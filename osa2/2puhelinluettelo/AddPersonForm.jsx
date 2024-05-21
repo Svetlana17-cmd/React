@@ -7,13 +7,13 @@ const AddPersonForm = ({ newName, phone, handleAddName, setNewName, setPhone }) 
 				type="text"
 				value={newName}
 				onChange={(e) => setNewName(e.target.value)}
-				placeholder="Имя"
+				placeholder="name"
 			/>
 			<input
 				type="text"
 				value={phone}
 				onChange={(e) => setPhone(e.target.value)}
-				placeholder=""
+				placeholder="number"
 			/>
 			<button onClick={handleAddName}>add</button>
 		</div>
