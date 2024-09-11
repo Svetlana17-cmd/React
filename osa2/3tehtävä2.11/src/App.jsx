@@ -42,6 +42,9 @@ const App = () => {
 			important: Math.random() > 0.5,
 			id: String(persons.length + 1),
 		}
+		setPersons((persons.concat(personObject)));
+		setNewName('');
+		setPhone('');
 		console.log('What?')
 
 		const nameExists = persons.some(person => person.name === newName);
