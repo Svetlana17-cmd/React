@@ -1,0 +1,20 @@
+0.4: uusi muistiinpano
+The diagram for the process of creating a new note at https://studies.cs.helsinki.fi/exampleapp/notes.
+This diagram illustrates the interaction between the user, browser, and server in a Notes single-page application.
+sequence Diagram
+    participant User
+    participant Browser
+    participant Server
+
+    User->>Browser: Opens the page.
+    Browser->>Server: Requests a page /note.
+    Server-->>Browser: the HTML, CSS и JavaScript files
+    Browser->>User: Displays the page.
+
+    User->>Browser: Enters text into a note field.
+    Browser->>User: Clicks the "Save" button.
+    Browser->>Server: Sends a POST request with note data.
+    Server->>Server: Creates a new note in the database.
+    Server-->>Browser: Returns a successful status.
+    Browser->>User: Displays a successful save message.
+

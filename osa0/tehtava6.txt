@@ -1,0 +1,19 @@
+0.6: Uusi muistiinpano
+This diagram illustrates the interaction between the user, browser, and server in a Notes single-page application.
+Sequence Diagram
+    participant User
+    participant Browser
+    participant Server
+User->>Browser: Visits the page /spa.
+    Browser->>Server: Requests a page/spa.
+    Server-->>Browser: Send HTML, CSS и JavaScript.
+    Browser->>User: Displays the page.
+
+    User->>Browser: Interacts with a single page application.
+    Browser->>Server: Performs AJAX requests to the server
+    Server->>Server: Processes requests and returns data.
+    Server-->>Browser: Returns JSON data.
+
+    Browser->>User: Updates the interface according to data.
+
+
